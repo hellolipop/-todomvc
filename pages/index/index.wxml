@@ -1,0 +1,33 @@
+<view class="header">
+	<view class="img">
+		<image class="addser" src="/assets/plus.png"></image>
+	</view>
+	<input 
+  class="inp" 
+  placeholder="请输入事项" 
+  value="{{valueInput}}" 
+  bindinput="inputfn"
+  bindconfirm="addTodo">
+  </input>
+</view>
+
+<block wx:if = "{{list}}">
+	<view class="main">
+		<view class="item" wx:for = "{{list}}" wx:key = "id">
+			<icon type="{{item.complated?'success':'circle'}}" bindtap="todoSelect" data-id="{{item.id}}" size="18px"></icon>
+			<text class="{{item.complated?'complated':''}}">{{item.things}}</text>
+			<icon type="clear" bindtap="todoclear" data-id = "{{item.id}}" size="18px"></icon>
+		</view>
+	</view>
+	<view class="footer">
+		<text bindtap="toggleAll">toggle all</text>
+		<text>2 items</text>
+		<text>clear complated</text>
+	</view>
+</block>
+<block wx:else>
+<view class="target">
+  <view class="tips">Congrugelation</view>
+  <view class="isnone">There's no work to do</view>
+</view>
+</block>

@@ -1,0 +1,69 @@
+page {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.header {
+  border: 1px solid #ccc;
+  box-shadow: 0 0 20rpx #ccc;
+  display: flex;
+  border-radius: 10px; 
+  padding: 0 20rpx; 
+}
+.img {
+  width: 60rpx;
+  height: 60rpx;
+}
+.addser{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 5px;
+}
+.inp {
+  height: 60rpx;
+}
+/* 主体样式 */
+.main {
+  border: 2rpx solid #ccc;
+  margin-top: 20rpx;
+  box-shadow: 0 0 20rpx #ccc;
+  border-radius: 10px;
+}
+.main .item{
+  height: 80rpx;
+  border-bottom: 2rpx solid #ccc;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  justify-content: space-between;
+}
+.main .item:last-child{
+  border-bottom: none;
+}
+.main .item text{
+  flex: 1;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+.main .item text.complated {
+  color: #666;
+  text-decoration: line-through;
+
+}
+/* 底部样式 */
+.footer {
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+  color: #ccc;
+  margin-top: 20rpx;
+}
+
+.target {
+  margin-top: 100rpx;
+  font-size: 80rpx;
+  color: #666;
+  text-align: center;
+}
+.isnone {
+  font-size: 50rpx;
+}
